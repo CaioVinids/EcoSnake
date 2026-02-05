@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #d1f7d1; 
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  line-height: 1.6;
+  color: #333;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Animações globais, se houver */
+@keyframes fadeInZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Classe container genérica (se usada em múltiplas páginas com o mesmo estilo base) */
+.container-geral { /* Renomeado para evitar conflito com .container do Bootstrap ou outros */
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Classe card genérica (se usada em múltiplas páginas com o mesmo estilo base) */
+.card-geral { /* Renomeado para evitar conflito */
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  margin: 20px 0;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-geral h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #047857;
+  border-bottom: 2px solid #e0f2f1;
+  padding-bottom: 8px;
+}
+
+.card-geral p {
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+}
+
+.section-divider-geral {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #047857, transparent);
+  margin: 30px 0;
+}
+
+body.modal-open-no-scroll {
+  overflow: hidden; /* Impede o scroll quando um modal está aberto */
+}

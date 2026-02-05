@@ -1,0 +1,67 @@
+/* Container principal para todas as páginas de autenticação */
+.auth-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #e8f5e9; /* Fundo comum para as páginas de autenticação */
+  padding: 15px; 
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos para os links de opção e o separador, 
+   usados dentro do AuthCard nas páginas de autenticação. */
+.auth-option-link {
+  color: #047857;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-weight: 500; 
+}
+
+.auth-option-link:hover {
+  color: #036345;
+  text-decoration: underline;
+}
+
+.disabled-link { /* Para desabilitar visualmente os links durante o loading */
+  color: #9e9e9e;
+  pointer-events: none;
+  text-decoration: none;
+}
+
+.auth-options-separator { 
+  margin: 0 10px;
+  color: #ccc;
+}
+
+/* Classes de utilidade para espaçamento de botões DENTRO do AuthCard.
+   Estas são aplicadas no JSX das páginas de autenticação. */
+.auth-page-container .auth-card .w-100 { /* Garante que o botão ocupe a largura total se a classe for usada */
+  width: 100%;
+}
+.auth-page-container .auth-card .mt-3 { 
+    margin-top: 20px !important; 
+}
+.auth-page-container .auth-card .mb-2 { 
+    margin-bottom: 10px !important;
+}
+.auth-page-container .auth-card .mb-3 { 
+    margin-bottom: 20px !important;
+}
+
+/* Responsividade para o container da página de autenticação, se necessário.
+   A responsividade do AuthCard em si é tratada em AuthCard.css. */
+@media (max-width: 480px) {
+  .auth-page-container {
+    /* Se precisar de ajustes no padding da página em telas muito pequenas */
+    /* padding: 10px; */
+  }
+  .auth-page-container .auth-card { 
+    /* O AuthCard.css já aplica margens laterais de 5px em telas < 480px.
+       Se precisar de margem vertical adicional para o card DENTRO destas páginas: */
+    /* margin-top: 10px; 
+       margin-bottom: 10px; */
+  }
+}

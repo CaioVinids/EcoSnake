@@ -1,0 +1,163 @@
+/* src/components/ui/AuthCard/AuthCard.css */
+.auth-card {
+  background-color: #ffffff;
+  padding: 30px 35px; /* Ajustado padding horizontal padrão */
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  animation: fadeInCard 0.5s ease-out;
+  box-sizing: border-box; /* Adicionado para melhor controle de tamanho */
+}
+
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.auth-card-logo {
+  max-width: 160px; /* Reduzido um pouco o tamanho máximo */
+  margin-bottom: 20px;
+}
+
+.auth-card-title {
+  font-size: 1.8rem; /* Reduzido um pouco */
+  color: #047857;
+  margin-bottom: 8px;
+  font-weight: 600;
+  word-break: break-word; /* Permite quebra de palavra se o título for muito longo */
+}
+
+.auth-card-subtitle {
+  font-size: 0.95rem; /* Reduzido um pouco */
+  color: #555;
+  margin-bottom: 25px;
+  word-break: break-word; /* Permite quebra de palavra */
+}
+
+.auth-card-content {
+  text-align: left; 
+}
+
+.auth-card form .mb-3 { 
+  margin-bottom: 18px !important; /* Levemente reduzido */
+}
+
+.auth-card form .form-label {
+  display: block;
+  margin-bottom: 5px; /* Levemente reduzido */
+  font-weight: 500;
+  color: #333;
+  font-size: 0.85rem; /* Levemente reduzido */
+}
+
+.auth-card form .form-control {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 0.95rem; /* Levemente reduzido */
+}
+
+.auth-card form .form-control:focus {
+  border-color: #047857;
+  box-shadow: 0 0 0 0.2rem rgba(4, 120, 87, 0.25);
+  outline: none;
+}
+
+.auth-card-error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 10px 12px; /* Levemente reduzido */
+  border-radius: 6px;
+  margin-top: 0;
+  margin-bottom: 18px; /* Levemente reduzido */
+  font-size: 0.85rem; /* Levemente reduzido */
+  border: 1px solid #ef9a9a;
+  text-align: left;
+}
+
+.auth-card-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0; /* Levemente reduzido */
+  color: #aaa;
+  font-size: 0.85rem; /* Levemente reduzido */
+}
+
+.auth-card-divider::before,
+.auth-card-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+}
+
+.auth-card-divider span {
+  padding: 0 10px; 
+}
+
+.auth-card-options {
+  margin-top: 20px; /* Levemente reduzido */
+  font-size: 0.85rem; /* Levemente reduzido */
+  text-align: center; 
+}
+
+.auth-card-options-separator {
+  margin: 0 8px; /* Levemente reduzido */
+  color: #ccc;
+}
+
+/* Responsividade para o card */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 25px 15px; /* Padding horizontal reduzido para telas pequenas */
+    margin-left: 10px; /* Adiciona uma pequena margem para não colar nas bordas da tela */
+    margin-right: 10px;
+    max-width: none; /* Permite que width: 100% funcione dentro das margens da página */
+  }
+  .auth-card-title {
+    font-size: 1.6rem; /* Tamanho de título menor para mobile */
+  }
+  .auth-card-logo {
+    max-width: 120px; /* Logo menor para mobile */
+  }
+  .auth-card-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  .auth-card form .form-label {
+    font-size: 0.8rem;
+  }
+  .auth-card form .form-control {
+    font-size: 0.9rem;
+  }
+  .auth-card-error-message {
+    font-size: 0.8rem;
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .auth-card {
+    padding: 20px 10px; /* Padding horizontal ainda mais reduzido */
+  }
+  .auth-card-title {
+    font-size: 1.5rem; /* Tamanho de título ainda menor para telas muito pequenas */
+  }
+  .auth-card-logo {
+    display: none; /* Logo ainda menor para telas muito pequenas */
+  }
+  .auth-card-subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+  }
+}

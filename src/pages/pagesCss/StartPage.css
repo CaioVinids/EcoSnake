@@ -1,0 +1,78 @@
+/* Estilo para o container da página, para aplicar o fundo e centralizar se necessário */
+.start-page-container {
+  background-color: #D1F7D1; 
+  font-family: 'Arial', sans-serif; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; 
+  padding: 20px; 
+  box-sizing: border-box;
+}
+
+/* Container para o conteúdo principal, para manter a estrutura original */
+.start-page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.start-page-logo {
+  max-width: 600px; 
+  width: 80%; 
+}
+
+.start-page-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.start-page-btn {
+  padding: 12px 30px;
+  font-size: 25px;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  width: 250px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.start-page-btn:hover {
+  transform: scale(1.05);
+}
+
+.start-page-jogar {
+  background-color: #4CAF50;
+}
+
+.start-page-sobre {
+  background-color: #81C784;
+}
+
+/* Media query para telas menores, se necessário */
+@media (max-width: 768px) {
+  .start-page-logo {
+    max-width: 90%;
+    margin-bottom: 30px;
+  }
+
+  .start-page-btn {
+    font-size: 20px;
+    padding: 10px 25px;
+    width: 220px;
+  }
+}
+
+.start-page-sair {
+  background-color: #A1887F ; 
+}
+
+.start-page-sair:hover {
+  background-color: #8D6E63; 
+}

@@ -1,0 +1,59 @@
+.btn-ui-primary { 
+  background-color: #047857; 
+  border-color: #047857; 
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 1px solid transparent; 
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-ui-primary:hover,
+.btn-ui-primary:focus {
+  background-color: #036345; 
+  border-color: #036345;
+  color: white;
+}
+
+.btn-ui-google { 
+  background-color: black; 
+  border-color: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  display: inline-flex; 
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-ui-google:hover,
+.btn-ui-google:focus {
+  background-color: #393b3b; 
+  border-color: #393b3b;
+  color: white;
+}
+
+.btn-ui-google svg {
+  margin-right: 8px;
+  width: 18px; 
+  height: 18px; 
+}
+
+
+.auth-option-link { 
+  color: #047857;
+  font-size: 0.9rem; 
+  text-decoration: none; 
+  transition: color 0.2s ease;
+}
+
+.auth-option-link:hover {
+  color: #036345; 
+  text-decoration: underline; 
+}
