@@ -36,7 +36,7 @@ Para executar este projeto em sua máquina local, siga os passos abaixo:
 1.  **Clone o repositório:**
     ```bash
     git clone [URL_DO_SEU_REPOSITORIO_AQUI]
-    cd ecosnake-login 
+    cd GameEcoSnake 
     ```
 
 2.  **Instale as dependências:**
@@ -94,6 +94,13 @@ Para executar este projeto em sua máquina local, siga os passos abaixo:
     VITE_FIREBASE_MEASUREMENT_ID=seu_measurement_id_aqui
     ```
     * Substitua os valores `sua/seu_aqui` pelas suas credenciais do Console do Firebase.
+    * Não esqueça de adicionar o nome .env dentro do seu arquivo .gitignore para ele não ser enviado ao GitHub por acidente!:
+    ```javascript
+    # Arquivos de ambiente/configurações sensíveis
+    .env
+    .env.local
+    .env.development.local
+    ```
  
 5.  **Execute o projeto:**
     ```bash
