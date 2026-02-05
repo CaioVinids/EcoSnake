@@ -59,26 +59,44 @@ Para executar este projeto em sua máquina local, siga os passos abaixo:
       import { getAuth } from "firebase/auth";       // Para Autenticação
 
       const firebaseConfig = {
-        apiKey: "SUA_API_KEY",
-        authDomain: "SEU_AUTH_DOMAIN",
-        projectId: "SEU_PROJECT_ID",
-        storageBucket: "SEU_STORAGE_BUCKET",
-        messagingSenderId: "SEU_MESSAGING_SENDER_ID",
-        appId: "SUA_APP_ID"
+        apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+        authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+        projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+        storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+        messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+        appId: import.meta.env.VITE_FIREBASE_APP_ID,
+        measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
       };
 
       // Inicializa o Firebase
       const app = initializeApp(firebaseConfig);
 
       // Exporta os serviços que você vai usar
-      // const db = getFirestore(app); // Exemplo para Firestore
+      const db = getFirestore(app); // Exemplo para Firestore
       const auth = getAuth(app);   // Para Autenticação
 
-      export { app, auth /*, db */ };
+      export { app, auth, db };
       ```
     * Certifique-se de habilitar a "Autenticação por e-mail/senha" e "Google" como provedores de login no seu console do Firebase.
 
-4.  **Execute o projeto:**
+
+4.  **⚙️ Configuração Local:**
+    Este projeto utiliza o Firebase. Para rodar localmente, siga os passos:
+    * **Crie um arquivo chamado `.env` na raiz do projeto.
+    * **Copie o conteúdo abaixo e cole no seu arquivo `.env`:
+    ```javascript
+    VITE_FIREBASE_API_KEY=sua_chave_aqui
+    VITE_FIREBASE_AUTH_DOMAIN=seu_dominio_aqui
+    VITE_FIREBASE_PROJECT_ID=seu_id_aqui
+    VITE_FIREBASE_STORAGE_BUCKET=seu_bucket_aqui
+    VITE_FIREBASE_MESSAGING_SENDER_ID=seu_sender_id_aqui
+    VITE_FIREBASE_APP_ID=seu_app_id_aqui
+    VITE_FIREBASE_MEASUREMENT_ID=seu_measurement_id_aqui
+    ```
+    * **Substitua os valores `sua/seu_aqui` pelas suas credenciais do Console do Firebase.
+    ```
+
+5.  **Execute o projeto:**
     ```bash
     npm run dev
     ```
