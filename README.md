@@ -82,8 +82,8 @@ Para executar este projeto em sua máquina local, siga os passos abaixo:
 
 4.  **⚙️ Configuração Local:**
     Este projeto utiliza o Firebase. Para rodar localmente, siga os passos:
-    * **Crie um arquivo chamado `.env` na raiz do projeto.
-    * **Copie o conteúdo abaixo e cole no seu arquivo `.env`:
+    * Crie um arquivo chamado `.env` na raiz do projeto.
+    * Copie o conteúdo abaixo e cole no seu arquivo `.env`:
     ```javascript
     VITE_FIREBASE_API_KEY=sua_chave_aqui
     VITE_FIREBASE_AUTH_DOMAIN=seu_dominio_aqui
@@ -93,9 +93,8 @@ Para executar este projeto em sua máquina local, siga os passos abaixo:
     VITE_FIREBASE_APP_ID=seu_app_id_aqui
     VITE_FIREBASE_MEASUREMENT_ID=seu_measurement_id_aqui
     ```
-    * **Substitua os valores `sua/seu_aqui` pelas suas credenciais do Console do Firebase.
-    ```
-
+    * Substitua os valores `sua/seu_aqui` pelas suas credenciais do Console do Firebase.
+ 
 5.  **Execute o projeto:**
     ```bash
     npm run dev
