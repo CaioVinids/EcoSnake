@@ -87,6 +87,8 @@
   align-items: center;
   text-align: center;
   position: relative; 
+  padding: 5px 0; /* Um pequeno respiro nas bordas */
+  box-sizing: border-box; /* Garante que o padding não aumente o tamanho */
 }
 
 canvas#gameCanvas { 
@@ -95,6 +97,7 @@ canvas#gameCanvas {
   display: block; 
   border-radius: 8px; 
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  max-height: 75vh;
 }
 
 #score.game-score-display { 
